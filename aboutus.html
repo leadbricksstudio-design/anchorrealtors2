@@ -1,0 +1,598 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Anchor Realtors</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0F3D2E',
+secondary: '#D4AF37'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.6s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.timeline-item {
+opacity: 0;
+transform: translateX(-30px);
+transition: all 0.6s ease;
+}
+.timeline-item.visible {
+opacity: 1;
+transform: translateX(0);
+}
+.timeline-item:nth-child(even) {
+transform: translateX(30px);
+}
+.timeline-item:nth-child(even).visible {
+transform: translateX(0);
+}
+</style>
+</head>
+<body class="bg-primary text-white font-['Inter']">
+<header class="fixed top-0 w-full bg-primary bg-opacity-95 backdrop-blur-sm border-b border-secondary border-opacity-20 z-40">
+<div class="max-w-7xl mx-auto px-8 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<h1 class="text-secondary font-['Inter'] font-bold text-2xl">Anchor Realtors</h1>
+</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="index.html" data-readdy="true" class="text-white hover:text-secondary transition-colors duration-300">Home</a>
+
+<span class="text-secondary font-semibold">About Us</span>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="tel:+919810882829" class="hidden md:flex items-center text-white hover:text-secondary transition-colors duration-300">
+<i class="ri-phone-line mr-2 w-4 h-4 flex items-center justify-center"></i>
++91 98108 82829
+</a>
+<button id="mobile-menu-toggle" class="md:hidden w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+<div id="mobile-menu" class="md:hidden hidden border-t border-secondary border-opacity-20 mt-4 pt-4">
+<nav class="flex flex-col space-y-4">
+<a href="index.html" data-readdy="true" class="text-white hover:text-secondary transition-colors duration-300">Home</a>
+
+<span class="text-secondary font-semibold">About Us</span>
+<a href="tel:+919810882829" class="flex items-center text-secondary">
+<i class="ri-phone-line mr-2 w-4 h-4 flex items-center justify-center"></i>
++91 98108 82829
+</a>
+</nav>
+</div>
+</div>
+</header>
+<div class="fixed bottom-6 right-6 z-50">
+<div class="relative group">
+<div class="absolute bottom-16 right-0 bg-black text-white px-4 py-2 !rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+WhatsApp us Now
+<div class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-black"></div>
+</div>
+<a href="https://wa.me/919810882829" target="_blank" class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:scale-110">
+<i class="ri-whatsapp-fill text-2xl"></i>
+</a>
+</div>
+</div>
+<section class="relative h-screen w-full overflow-hidden mt-20" style="background-image: url('villa.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-70"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-6">Building Dreams, Creating Legacies</h1>
+<p class="text-white text-xl mb-8 leading-relaxed">For over 15 years, Anchor Realtors has been transforming the real estate landscape with premium land investments and exceptional customer service. We don't just sell properties; we create communities where dreams come to life.</p>
+<div class="grid md:grid-cols-3 gap-8 mt-12">
+<div class="text-center">
+<div class="text-secondary text-4xl font-bold mb-2">15+</div>
+<div class="text-white text-lg">Years of Excellence</div>
+</div>
+<div class="text-center">
+<div class="text-secondary text-4xl font-bold mb-2">50+</div>
+<div class="text-white text-lg">Premium Projects</div>
+</div>
+<div class="text-center">
+<div class="text-secondary text-4xl font-bold mb-2">2000+</div>
+<div class="text-white text-lg">Happy Families</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Our Story</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="fade-in">
+<div class="h-96 bg-cover bg-center !rounded-lg" style="background-image: url('venice.jpeg');"></div>
+</div>
+<div class="fade-in">
+<h3 class="text-secondary font-['Playfair_Display'] text-3xl font-bold mb-6">From Humble Beginnings to Industry Leadership</h3>
+<p class="text-white text-lg leading-relaxed mb-6">Founded in 2009 by visionary entrepreneur Rajesh Anchor, Anchor Realtors began as a small real estate consultancy with a big dream: to redefine luxury living in the National Capital Region. What started with a single office in Gurugram has grown into one of the most trusted names in premium land development.</p>
+<p class="text-white text-lg leading-relaxed mb-6">Our journey has been marked by unwavering commitment to quality, transparency, and customer satisfaction. From our first project in Sector 89 to our latest ultra-premium developments, we have consistently delivered beyond expectations.</p>
+<p class="text-white text-lg leading-relaxed">Today, Anchor Realtors stands as a testament to the power of vision, integrity, and relentless pursuit of excellence in creating spaces where families build their futures.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8 bg-gradient-to-b from-primary to-black">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Our Mission, Vision & Values</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-6">
+<i class="ri-target-line text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4">Our Mission</h3>
+<p class="text-white leading-relaxed">To transform dreams into reality by providing premium land investments that offer exceptional value, unparalleled quality, and sustainable growth opportunities for discerning investors seeking luxury lifestyle destinations.</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-6">
+<i class="ri-eye-line text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4">Our Vision</h3>
+<p class="text-white leading-relaxed">To become the most trusted name in luxury real estate, setting new benchmarks in premium land development while creating exclusive communities that enhance the quality of life for generations to come.</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-6">
+<i class="ri-heart-line text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4">Our Values</h3>
+<div class="text-left space-y-2">
+<div class="flex items-center text-white"><i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Integrity & Transparency</div>
+<div class="flex items-center text-white"><i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Excellence in Quality</div>
+<div class="flex items-center text-white"><i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Customer-Centricity</div>
+<div class="flex items-center text-white"><i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Innovation & Growth</div>
+<div class="flex items-center text-white"><i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Sustainability Focus</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Company Timeline</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Major milestones in our journey of excellence</p>
+</div>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-secondary h-full"></div>
+<div class="space-y-12">
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8 text-right">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2009 - Foundation</h3>
+<p class="text-white">Anchor Realtors established with a vision to transform luxury real estate in NCR</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-building-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8"></div>
+</div>
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8"></div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-trophy-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2012 - First Major Project</h3>
+<p class="text-white">Launch of Emerald Heights - our flagship project that set new standards in luxury living</p>
+</div>
+</div>
+</div>
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8 text-right">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2015 - Industry Recognition</h3>
+<p class="text-white">Received 'Best Emerging Developer' award from Real Estate Excellence Council</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-award-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8"></div>
+</div>
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8"></div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-team-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2018 - Team Expansion</h3>
+<p class="text-white">Expanded to 50+ professionals and opened new offices in Faridabad and Manesar</p>
+</div>
+</div>
+</div>
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8 text-right">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2021 - Digital Innovation</h3>
+<p class="text-white">Launched virtual site visits and digital documentation for enhanced customer experience</p>
+</div>
+</div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-smartphone-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8"></div>
+</div>
+<div class="timeline-item flex items-center">
+<div class="w-1/2 pr-8"></div>
+<div class="w-8 h-8 bg-secondary !rounded-full border-4 border-primary flex items-center justify-center relative z-10">
+<i class="ri-star-line text-primary text-sm"></i>
+</div>
+<div class="w-1/2 pl-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6">
+<h3 class="text-secondary font-bold text-xl mb-2">2024 - Premium Portfolio</h3>
+<p class="text-white">Achieved milestone of 50+ premium projects with 2000+ satisfied customers</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8 bg-gradient-to-b from-black to-primary">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Leadership Team</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Meet the visionaries behind our success</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-32 h-32 bg-cover bg-center !rounded-full mx-auto mb-4 border-4 border-secondary border-opacity-50" style="background-image: url('nishant.jpeg');"></div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-bold mb-2">Nishant Walia</h3>
+<p class="text-secondary text-sm mb-3">Founder & CEO</p>
+<p class="text-white text-sm leading-relaxed">With 20+ years in real estate, Nishant's vision and leadership have transformed Anchor Realtors into a premium brand. His commitment to excellence drives our company's growth and innovation.</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-32 h-32 bg-cover bg-center !rounded-full mx-auto mb-4 border-4 border-secondary border-opacity-50" style="background-image: url('manish.jpeg');"></div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-bold mb-2">Manish Singh</h3>
+<p class="text-secondary text-sm mb-3">Managing Director</p>
+<p class="text-white text-sm leading-relaxed">Manish brings strategic planning expertise and operational excellence to our projects. His focus on customer satisfaction and quality assurance ensures every project exceeds expectations.</p>
+</div>
+
+</div>
+</div>
+</section>
+<section class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Awards & Certifications</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Recognition of our commitment to excellence</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-trophy-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">Best Developer 2023</h3>
+<p class="text-white text-sm">Real Estate Excellence Awards for outstanding contribution to luxury development</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-customer-service-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">Customer Choice Award</h3>
+<p class="text-white text-sm">Recognized for exceptional customer service and satisfaction in real estate sector</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-shield-check-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">RERA Certified</h3>
+<p class="text-white text-sm">All projects registered under Real Estate Regulatory Authority for transparency</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-leaf-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">Green Building Certified</h3>
+<p class="text-white text-sm">Commitment to sustainable development and environmental responsibility</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-star-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">5-Star Rating</h3>
+<p class="text-white text-sm">Consistently rated 5-star by customers for quality and service excellence</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-building-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">CREDAI Member</h3>
+<p class="text-white text-sm">Proud member of Confederation of Real Estate Developers' Associations of India</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-secure-payment-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">ISO 9001:2015</h3>
+<p class="text-white text-sm">Quality Management System certification for consistent service delivery</p>
+</div>
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 text-center fade-in">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary bg-opacity-20 !rounded-lg mx-auto mb-4">
+<i class="ri-medal-fill text-secondary text-2xl"></i>
+</div>
+<h3 class="text-secondary font-bold text-lg mb-2">Innovation Award 2022</h3>
+<p class="text-white text-sm">Recognized for innovative approaches in luxury real estate development</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Office Locations</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Visit us at our convenient locations</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-6 fade-in">
+<div class="h-48 bg-center bg-cover !rounded mb-4" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center;"></div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-bold mb-3">Head Office - Noida Sector 62</h3>
+<div class="space-y-3 text-white">
+<div class="flex items-start">
+<i class="ri-map-pin-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">Majestic Signia, Plot No. A-27, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309</p>
+<p class="text-sm text-gray-300">Noida Sector-62</p>
+</div>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line text-secondary mr-3 w-4 h-4 flex items-center justify-center"></i>
+<p>+91 98108 82829</p>
+</div>
+<div class="flex items-center">
+<i class="ri-mail-line text-secondary mr-3 w-4 h-4 flex items-center justify-center"></i>
+<p>support@anchorrealtors.com</p>
+</div>
+<div class="flex items-center">
+<i class="ri-time-line text-secondary mr-3 w-4 h-4 flex items-center justify-center"></i>
+<p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-8 bg-gradient-to-b from-black to-primary">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Company Culture</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Building success through teamwork and innovation</p>
+</div>
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="fade-in">
+<h3 class="text-secondary font-['Playfair_Display'] text-3xl font-bold mb-6">Our Work Environment</h3>
+<p class="text-white text-lg leading-relaxed mb-6">At Anchor Realtors, we believe that great projects are built by great teams. Our work culture fosters innovation, collaboration, and continuous learning. We invest in our people because we know that their success drives our company's growth.</p>
+<div class="space-y-4">
+<div class="flex items-center text-white">
+<i class="ri-team-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>
+<span>Collaborative team environment</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-lightbulb-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>
+<span>Innovation and creativity encouraged</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-graduation-cap-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>
+<span>Continuous learning and development</span>
+</div>
+<div class="flex items-center text-white">
+<i class="ri-heart-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>
+<span>Work-life balance priority</span>
+</div>
+</div>
+</div>
+<div class="fade-in">
+<div class="grid grid-cols-2 gap-4">
+<div class="h-48 bg-cover bg-center !rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=modern%20corporate%20office%20environment%20with%20professional%20team%20members%20working%20collaboratively%20in%20open%20workspace%20with%20contemporary%20design%20and%20natural%20lighting&width=300&height=200&seq=office1&orientation=landscape');"></div>
+<div class="h-48 bg-cover bg-center !rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=corporate%20team%20building%20activity%20with%20diverse%20professionals%20in%20modern%20office%20setting%20showing%20collaboration%20and%20teamwork%20in%20business%20environment&width=300&height=200&seq=office2&orientation=landscape');"></div>
+<div class="h-48 bg-cover bg-center !rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=professional%20business%20meeting%20in%20modern%20conference%20room%20with%20team%20members%20discussing%20projects%20and%20strategies%20in%20corporate%20environment&width=300&height=200&seq=office3&orientation=landscape');"></div>
+<div class="h-48 bg-cover bg-center !rounded-lg" style="background-image: url('https://readdy.ai/api/search-image?query=corporate%20celebration%20and%20team%20achievement%20event%20in%20modern%20office%20space%20with%20professional%20staff%20celebrating%20success%20and%20milestones&width=300&height=200&seq=office4&orientation=landscape');"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-black border-t-2 border-secondary py-16 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div class="md:col-span-2">
+<h2 class="text-secondary font-['Inter'] font-bold text-3xl mb-4">Anchor Realtors</h2>
+<p class="text-gray-300 mb-6 leading-relaxed">Premium land investments for discerning investors. Creating luxury communities that enhance lifestyle and deliver exceptional returns.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="https://wa.me/919810882829" class="bg-secondary text-primary px-6 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap">
+<i class="ri-whatsapp-fill mr-2 w-5 h-5 flex items-center justify-center"></i>
+WhatsApp Us
+</a>
+<a href="tel:+919810882829" class="border-2 border-secondary text-secondary px-6 py-3 !rounded-button font-semibold hover:bg-secondary hover:text-primary transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap">
+<i class="ri-phone-fill mr-2 w-5 h-5 flex items-center justify-center"></i>
+Call Now
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-semibold mb-4">Contact Info</h3>
+<div class="space-y-3 text-gray-300">
+<div class="flex items-start">
+<i class="ri-phone-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">+91 98108 82829</p>
+<p class="text-sm">Sales Enquiry</p>
+</div>
+</div>
+<div class="flex items-start">
+<i class="ri-mail-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">info@anchorrealtors.com</p>
+<p class="text-sm">General Enquiry</p>
+</div>
+</div>
+<div class="flex items-start">
+<i class="ri-map-pin-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">Noida Sector 62</p>
+<p class="text-sm">Head Office</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-semibold mb-4">Our Projects</h3>
+<ul class="space-y-3">
+<li><a href="index.html" data-readdy="true" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Emerald Villa</a></li>
+<li><a href="index.html" data-readdy="true" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Mapple Green</a></li>
+<li><a href="index.html" data-readdy="true" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Atulyam Residency</a></li>
+<li><a href="index.html" data-readdy="true" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Azizi Venice</a></li>
+<li><a href="index.html" data-readdy="true" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Azizi Rose</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<p class="text-gray-400 mb-4 md:mb-0">&copy; 2026 Anchor Realtors. All rights reserved. Premium Land Investments.</p>
+<div class="flex space-x-6 text-sm">
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Terms & Conditions</a>
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Disclaimer</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="fade-in-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in, .timeline-item').forEach(el => {
+observer.observe(el);
+});
+});
+</script>
+<script id="header-functionality-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const header = document.querySelector('header');
+mobileMenuToggle.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+const icon = mobileMenuToggle.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.className = 'ri-menu-line text-xl';
+} else {
+icon.className = 'ri-close-line text-xl';
+}
+});
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerHeight = header.offsetHeight;
+const targetPosition = targetElement.offsetTop - headerHeight - 20;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+mobileMenuToggle.querySelector('i').className = 'ri-menu-line text-xl';
+}
+}
+});
+});
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('bg-opacity-100');
+header.classList.remove('bg-opacity-95');
+} else {
+header.classList.add('bg-opacity-95');
+header.classList.remove('bg-opacity-100');
+}
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_V7JMHB0fVJGRu8UHyrsj6pSL1BS76P5zD8qCi7lrTTV', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '4U3qQ0NBu9SyF09Po1yc_Q';
+    window.host = 'readdy.ai';
+</script>
+</html>

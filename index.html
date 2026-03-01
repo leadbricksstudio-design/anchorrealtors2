@@ -1,0 +1,962 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="https://static.readdy.ai/static/e.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchor Realtors - Premium Land Investments</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0F3D2E',
+secondary: '#D4AF37'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before {
+content: "\f3c2";
+}
+.hero-slide {
+transition: opacity 0.8s ease-in-out;
+}
+.testimonial-scroll {
+animation: scroll-right 30s linear infinite;
+}
+@keyframes scroll-right {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.6s ease;
+}
+.fade-in.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.card-hover {
+transition: all 0.3s ease;
+}
+.card-hover:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+.modal-backdrop {
+backdrop-filter: blur(10px);
+}
+.slide-form {
+transform: translateX(100%);
+transition: transform 0.5s ease;
+}
+.slide-form.active {
+transform: translateX(0);
+}
+</style>
+</head>
+<body class="bg-primary text-white font-['Inter']">
+<!-- Header -->
+<header class="fixed top-0 w-full bg-primary bg-opacity-95 backdrop-blur-sm border-b border-secondary border-opacity-20 z-40">
+<div class="max-w-7xl mx-auto px-8 py-4">
+<div class="flex items-center justify-between">
+<!-- Logo -->
+<div class="flex items-center">
+<h1 class="text-secondary font-['Inter'] font-bold text-2xl">Anchor Realtors</h1>
+</div>
+<!-- Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#projects" class="text-white hover:text-secondary transition-colors duration-300">Projects</a>
+<a href="#payment-plans" class="text-white hover:text-secondary transition-colors duration-300">Payment Plans</a>
+<a href="#video" class="text-white hover:text-secondary transition-colors duration-300">Overview</a>
+<a href="#testimonials" class="text-white hover:text-secondary transition-colors duration-300">Testimonials</a>
+<a href="aboutus.html" data-readdy="true" class="text-white hover:text-secondary transition-colors duration-300">About Us</a>
+</nav>
+</修改前>
+<!-- Contact Button -->
+<div class="flex items-center space-x-4">
+<a href="tel:+919810882829" class="hidden md:flex items-center text-white hover:text-secondary transition-colors duration-300">
+<i class="ri-phone-line mr-2 w-4 h-4 flex items-center justify-center"></i>
++91 98108 82829
+</a>
+<button id="mobile-menu-toggle" class="md:hidden w-8 h-8 flex items-center justify-center text-white">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden hidden border-t border-secondary border-opacity-20 mt-4 pt-4">
+<nav class="flex flex-col space-y-4">
+<a href="#projects" class="text-white hover:text-secondary transition-colors duration-300">Projects</a>
+<a href="#payment-plans" class="text-white hover:text-secondary transition-colors duration-300">Payment Plans</a>
+<a href="#video" class="text-white hover:text-secondary transition-colors duration-300">Overview</a>
+<a href="#testimonials" class="text-white hover:text-secondary transition-colors duration-300">Testimonials</a>
+<a href="https://readdy.ai/home/58445943-8519-4be3-aae3-f2a6b55ecc5f/3428d807-062f-4c4f-bf0a-4b9d24e0dd64" data-readdy="true" class="text-white hover:text-secondary transition-colors duration-300">About Us</a>
+<a href="tel:+919810882829" class="flex items-center text-secondary">
+<i class="ri-phone-line mr-2 w-4 h-4 flex items-center justify-center"></i>
++91 98108 82829
+</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Floating WhatsApp Icon -->
+<div class="fixed bottom-6 right-6 z-50">
+<div class="relative group">
+<!-- Tooltip -->
+<div class="absolute bottom-16 right-0 bg-black text-white px-4 py-2 !rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+WhatsApp us Now
+<div class="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-l-transparent border-r-transparent border-t-black"></div>
+</div>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/919810882829" target="_blank" class="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:scale-110">
+<i class="ri-whatsapp-fill text-2xl"></i>
+</a>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden mt-20">
+<div id="hero-slider" class="relative w-full h-full">
+<!-- Slide 1 -->
+<div class="hero-slide absolute inset-0 w-full h-full" style="background-image: url('villa.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-4">Emerald Villa</h1>
+<p class="text-white text-xl mb-2">Emerald Villas Sector 12, Greater Noida West</p>
+<p class="text-secondary text-lg mb-8 italic">Where luxury meets tranquility</p>
+<button class="bg-secondary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Explore Projects</button>
+</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide absolute inset-0 w-full h-full opacity-0" style="background-image: url('mapple.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-4">Mapple Green</h1>
+<p class="text-white text-xl mb-2">Goonti, behror, Rajasthan 301701</p>
+<p class="text-secondary text-lg mb-8 italic">Premium plots for discerning investors</p>
+<button class="bg-secondary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Explore Projects</button>
+</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="hero-slide absolute inset-0 w-full h-full opacity-0" style="background-image: url('atulyam.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-4">Atulyam Residency</h1>
+<p class="text-white text-xl mb-2">Prime Location Benefits</p>
+<p class="text-secondary text-lg mb-8 italic">Exclusive residential investment zone with amenities</p>
+<button class="bg-secondary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Explore Projects</button>
+</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="hero-slide absolute inset-0 w-full h-full opacity-0" style="background-image: url('venice.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-4">Azizi Venice</h1>
+<p class="text-white text-xl mb-2">Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates</p>
+<p class="text-secondary text-lg mb-8 italic">Ultra-Luxury Residential zone for Elites Only</p>
+<button class="bg-secondary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Explore Projects</button>
+</div>
+</div>
+</div>
+<!-- Slide 5 -->
+<div class="hero-slide absolute inset-0 w-full h-full opacity-0" style="background-image: url('rose.jpeg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary bg-opacity-60"></div>
+<div class="relative z-10 h-full flex items-center justify-center text-center px-8">
+<div class="max-w-4xl">
+<h1 class="text-secondary font-['Playfair_Display'] text-6xl font-bold mb-4">Azizi Rose</h1>
+<p class="text-white text-xl mb-2">2 Downtown Street - Jabal Ali Industrial Second - Dubai - United Arab Emirates</p>
+<p class="text-secondary text-lg mb-8 italic">Investment opportunity of a lifetime, Invest in Dubai's Estates</p>
+<button class="bg-secondary text-primary px-8 py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Explore Projects</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Arrows -->
+<button id="prev-slide" class="absolute left-8 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-80 hover:bg-opacity-100 !rounded-button transition-all duration-300">
+<i class="ri-arrow-left-line text-primary text-xl"></i>
+</button>
+<button id="next-slide" class="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-80 hover:bg-opacity-100 !rounded-button transition-all duration-300">
+<i class="ri-arrow-right-line text-primary text-xl"></i>
+</button>
+<!-- Dots Indicator -->
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+<button class="slider-dot w-3 h-3 rounded-full bg-secondary transition-all duration-300"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300"></button>
+<button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300"></button>
+</div>
+</section>
+<!-- Mission & Vision Section -->
+<section class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="fade-in text-center md:text-left">
+<h2 class="text-secondary font-['Playfair_Display'] text-4xl font-bold mb-6">Our Mission</h2>
+<div class="w-20 h-0.5 bg-secondary mb-6 mx-auto md:mx-0"></div>
+<p class="text-white text-lg leading-relaxed">To transform dreams into reality by providing premium land investments that offer exceptional value, unparalleled quality, and sustainable growth opportunities for discerning investors seeking luxury lifestyle destinations.</p>
+</div>
+<div class="fade-in text-center md:text-left">
+<h2 class="text-secondary font-['Playfair_Display'] text-4xl font-bold mb-6">Our Vision</h2>
+<div class="w-20 h-0.5 bg-secondary mb-6 mx-auto md:mx-0"></div>
+<p class="text-white text-lg leading-relaxed">To become the most trusted name in luxury real estate, setting new benchmarks in premium land development while creating exclusive communities that enhance the quality of life for generations to come.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Premium Projects Section -->
+<section id="projects" class="py-20 px-8 bg-gradient-to-b from-primary to-black">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Premium Projects</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Discover our exclusive collection of luxury land investments</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="card-hover bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg overflow-hidden cursor-pointer project-card" data-project="emerald-heights">
+<div class="h-64 bg-cover bg-center" style="background-image: url('villa.jpeg');"></div>
+<div class="p-6">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-2">Emerald Villa</h3>
+<p class="text-white text-sm mb-3 flex items-center"><i class="ri-map-pin-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>B block, Sector 12, Greeno west, Saini, Greater Noida, Uttar Pradesh 203207</p>
+<p class="text-secondary text-xl font-semibold mb-3">Starting ₹1.5 Cr</p>
+<p class="text-gray-300 text-sm mb-4">Premium residential villa with world-class amenities and strategic location advantages.</p>
+<button class="bg-secondary text-primary px-6 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">View Details</button>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="card-hover bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg overflow-hidden cursor-pointer project-card" data-project="golden-meadows">
+<div class="h-64 bg-cover bg-center" style="background-image: url('mapple.jpeg');"></div>
+<div class="p-6">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-2">Mapple Green</h3>
+<p class="text-white text-sm mb-3 flex items-center"><i class="ri-map-pin-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Goonti, behror, Rajasthan 301701</p>
+<p class="text-secondary text-xl font-semibold mb-3">Starting ₹25 Lakhs</p>
+<p class="text-gray-300 text-sm mb-4">Exclusive plots with premium infrastructure and excellent connectivity to major hubs and NH-48.</p>
+<button class="bg-secondary text-primary px-6 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">View Details</button>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="card-hover bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg overflow-hidden cursor-pointer project-card" data-project="royal-gardens">
+<div class="h-64 bg-cover bg-center" style="background-image: url('atulyam.jpeg');"></div>
+<div class="p-6">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-2">Atulyam Residency</h3>
+<p class="text-white text-sm mb-3 flex items-center"><i class="ri-map-pin-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>NH-8, Manesar</p>
+<p class="text-secondary text-xl font-semibold mb-3">Starting ₹52 Lakhs</p>
+<p class="text-gray-300 text-sm mb-4">Ultra-premium plots with royal amenities and strategic highway connectivity.</p>
+<button class="bg-secondary text-primary px-6 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">View Details</button>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="card-hover bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg overflow-hidden cursor-pointer project-card" data-project="platinum-enclave">
+<div class="h-64 bg-cover bg-center" style="background-image: url('venice.jpeg');"></div>
+<div class="p-6">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-2">Azizi Venice</h3>
+<p class="text-white text-sm mb-3 flex items-center"><i class="ri-map-pin-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates</p>
+<p class="text-secondary text-xl font-semibold mb-3">Launch Soon</p>
+<p class="text-gray-300 text-sm mb-4">Elite residential property with platinum-grade amenities and expressway advantages.</p>
+<button class="bg-secondary text-primary px-6 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">View Details</button>
+</div>
+</div>
+<!-- Project 5 -->
+<div class="card-hover bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg overflow-hidden cursor-pointer project-card md:col-span-2 lg:col-span-1" data-project="diamond-valley">
+<div class="h-64 bg-cover bg-center" style="background-image: url('rose.jpeg');"></div>
+<div class="p-6">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-2">Azizi Rose</h3>
+<p class="text-white text-sm mb-3 flex items-center"><i class="ri-map-pin-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>2 Downtown Street - Jabal Ali Industrial Second - Dubai - United Arab Emirates</p>
+<p class="text-secondary text-xl font-semibold mb-3">Launch Soon</p>
+<p class="text-gray-300 text-sm mb-4">Diamond-grade property with exceptional investment potential and premium lifestyle amenities.</p>
+<button class="bg-secondary text-primary px-6 py-2 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Plans Section -->
+<section id="payment-plans" class="py-20 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Flexible Payment Plans</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto mb-6"></div>
+<p class="text-white text-xl">Choose the payment option that suits your investment strategy</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Plan 1 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border-2 border-secondary border-opacity-50 !rounded-lg p-8 text-center hover:border-opacity-100 transition-all duration-300">
+<div class="bg-secondary text-primary px-4 py-2 !rounded-button text-sm font-semibold mb-6 inline-block">POPULAR</div>
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4">Standard Plan</h3>
+<div class="text-white mb-6">
+<p class="text-3xl font-bold text-secondary mb-2">20% Down</p>
+<p class="text-lg">80% in 24 EMIs</p>
+</div>
+<ul class="text-white text-left space-y-3 mb-8">
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>No pre-EMI interest</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>Flexible payment schedule</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>Registry after 50% payment</li>
+</ul>
+</div>
+<!-- Plan 2 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border-2 border-secondary border-opacity-50 !rounded-lg p-8 text-center hover:border-opacity-100 transition-all duration-300">
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4 mt-8">Premium Plan</h3>
+<div class="text-white mb-6">
+<p class="text-3xl font-bold text-secondary mb-2">30% Down</p>
+<p class="text-lg">70% in 18 EMIs</p>
+</div>
+<ul class="text-white text-left space-y-3 mb-8">
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>5% additional discount</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>Priority plot selection</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>Complimentary site visit</li>
+</ul>
+</div>
+<!-- Plan 3 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border-2 border-secondary border-opacity-50 !rounded-lg p-8 text-center hover:border-opacity-100 transition-all duration-300">
+<div class="bg-secondary text-primary px-4 py-2 !rounded-button text-sm font-semibold mb-6 inline-block">LIMITED TIME</div>
+<h3 class="text-secondary font-['Playfair_Display'] text-2xl font-bold mb-4">Elite Plan</h3>
+<div class="text-white mb-6">
+<p class="text-3xl font-bold text-secondary mb-2">100% Cash</p>
+<p class="text-lg">One-time payment</p>
+</div>
+<ul class="text-white text-left space-y-3 mb-8">
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>12% special discount</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>Immediate registry</li>
+<li class="flex items-center"><i class="ri-check-line text-secondary mr-3 w-5 h-5 flex items-center justify-center"></i>VIP customer benefits</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Section -->
+<section id="video" class="py-20 px-8 bg-gradient-to-b from-black to-primary">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-12 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">Explore Our Project Overview</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto"></div>
+</div>
+<div class="relative !rounded-lg overflow-hidden shadow-2xl">
+<iframe
+class="w-full h-96 md:h-[500px]"
+src="https://www.youtube.com/embed/Q_0MFYr8q9M"
+title="Project Overview"
+frameborder="0"
+allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 overflow-hidden">
+<div class="text-center mb-16 fade-in">
+<h2 class="text-secondary font-['Playfair_Display'] text-5xl font-bold mb-4">What Our Clients Say</h2>
+<div class="w-32 h-0.5 bg-secondary mx-auto"></div>
+</div>
+<div class="relative">
+<div class="testimonial-scroll flex space-x-8 whitespace-nowrap">
+<!-- Testimonial 1 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">Anchor Realtors delivered beyond our expectations. The quality of infrastructure and attention to detail in Emerald Heights is remarkable. Best investment decision we ever made.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Rajesh Sharma</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">Professional team, transparent processes, and premium quality plots. Golden Meadows has exceeded all our expectations. Highly recommend for serious investors.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Priya Mehta</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">The location of Royal Gardens is perfect, and the amenities are world-class. The payment plan flexibility made it easy for us to invest. Excellent service throughout.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Amit Kumar</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 4 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">Platinum Enclave represents true luxury living. The infrastructure quality and strategic location make it a perfect investment for the future. Outstanding project management.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Neha Gupta</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 5 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">Diamond Valley offers exceptional value for money. The team's professionalism and the project's quality have made us confident about our investment choice.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Vikram Singh</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 6 -->
+<div class="bg-gradient-to-b from-gray-900 to-black border border-secondary border-opacity-30 !rounded-lg p-8 min-w-96 inline-block">
+<div class="text-secondary text-4xl mb-4">"</div>
+<p class="text-white text-lg mb-6 whitespace-normal">Exceptional customer service and premium quality infrastructure. The connectivity and amenities at our chosen project make it a perfect long-term investment.</p>
+<div class="flex items-center justify-between">
+<div>
+<p class="text-secondary font-semibold">Sunita Agarwal</p>
+<div class="flex text-secondary text-sm">
+<i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black border-t-2 border-secondary py-16 px-8">
+<div class="max-w-6xl mx-auto">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<!-- Logo & Company -->
+<div class="md:col-span-2">
+<h2 class="text-secondary font-['Pacifico'] text-3xl mb-4">Anchor Realtors</h2>
+<p class="text-gray-300 mb-6 leading-relaxed">Premium land investments for discerning investors. Creating luxury communities that enhance lifestyle and deliver exceptional returns.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="https://wa.me/919810882829" class="bg-secondary text-primary px-6 py-3 !rounded-button font-semibold hover:bg-opacity-90 transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap">
+<i class="ri-whatsapp-fill mr-2 w-5 h-5 flex items-center justify-center"></i>
+WhatsApp Us
+</a>
+<a href="tel:+919810882829" class="border-2 border-secondary text-secondary px-6 py-3 !rounded-button font-semibold hover:bg-secondary hover:text-primary transition-all duration-300 inline-flex items-center justify-center whitespace-nowrap">
+<i class="ri-phone-fill mr-2 w-5 h-5 flex items-center justify-center"></i>
+Call Now
+</a>
+</div>
+</div>
+<!-- Contact Info -->
+<div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-semibold mb-4">Contact Info</h3>
+<div class="space-y-3 text-gray-300">
+<div class="flex items-start">
+<i class="ri-phone-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">+91 98108 82829</p>
+<p class="text-sm">Sales Enquiry</p>
+</div>
+</div>
+<div class="flex items-start">
+<i class="ri-mail-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">support@anchorrealtors.com</p>
+<p class="text-sm">General Enquiry</p>
+</div>
+</div>
+<div class="flex items-start">
+<i class="ri-map-pin-line text-secondary mr-3 mt-1 w-4 h-4 flex items-center justify-center"></i>
+<div>
+<p class="font-medium">Majestic Signia, Plot No. A-27, Block A, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309</p>
+<p class="text-sm">Head Office</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-semibold mb-4">Our Projects</h3>
+<ul class="space-y-3">
+<li><a href="#projects" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Emerald Villa</a></li>
+<li><a href="#projects" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Mapple Green</a></li>
+<li><a href="#projects" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Atulyam Residency</a></li>
+<li><a href="#projects" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Azizi Venice</a></li>
+<li><a href="#projects" class="text-gray-300 hover:text-secondary transition-colors duration-300 flex items-center">
+<i class="ri-arrow-right-s-line mr-2 w-4 h-4 flex items-center justify-center"></i>Azizi Rose</a></li>
+</ul>
+</div>
+<!-- Social Media -->
+<div>
+<h3 class="text-secondary font-['Playfair_Display'] text-xl font-semibold mb-4">Follow Us</h3>
+<div class="flex space-x-4 mb-6">
+<a href="https://www.facebook.com/profile.php?id=61587995956963" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-secondary text-white hover:text-primary !rounded-button transition-all duration-300">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://www.instagram.com/anchor_realtors/" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-secondary text-white hover:text-primary !rounded-button transition-all duration-300">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="https://www.linkedin.com/in/anchor-realtors-a831853b1/?skipRedirect=true" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-secondary text-white hover:text-primary !rounded-button transition-all duration-300">
+<i class="ri-linkedin-fill"></i>
+</a>
+<a href="https://www.youtube.com/channel/UCyP9sYu3Y06gR3RvSECFKlA" class="w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-secondary text-white hover:text-primary !rounded-button transition-all duration-300">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+<div class="text-gray-300 text-sm">
+<p class="mb-2">Stay updated with our latest</p>
+<p>projects and exclusive offers</p>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<p class="text-gray-400 mb-4 md:mb-0">&copy; 2026 Anchor Realtors. All rights reserved. Premium Land Investments.</p>
+<div class="flex space-x-6 text-sm">
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Privacy Policy</a>
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Terms & Conditions</a>
+<a href="#" class="text-gray-400 hover:text-secondary transition-colors duration-300">Disclaimer</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Project Modal -->
+<div id="project-modal" class="fixed inset-0 bg-black bg-opacity-80 modal-backdrop z-50 hidden flex items-center justify-center p-8">
+<div class="bg-gradient-to-b from-gray-900 to-black border-2 border-secondary !rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-8">
+<!-- Modal Header -->
+<div class="flex justify-between items-center mb-6">
+<h2 id="modal-title" class="text-secondary font-['Playfair_Display'] text-3xl font-bold"></h2>
+<button id="close-modal" class="w-8 h-8 flex items-center justify-center text-white hover:text-secondary transition-colors duration-300">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<!-- Modal Content -->
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Image Gallery -->
+<div>
+<div id="modal-image" class="h-64 bg-cover bg-center !rounded-lg mb-4"></div>
+<div class="grid grid-cols-3 gap-2">
+<div class="modal-thumb h-20 bg-cover bg-center !rounded cursor-pointer border-2 border-transparent hover:border-secondary transition-all duration-300"></div>
+<div class="modal-thumb h-20 bg-cover bg-center !rounded cursor-pointer border-2 border-transparent hover:border-secondary transition-all duration-300"></div>
+<div class="modal-thumb h-20 bg-cover bg-center !rounded cursor-pointer border-2 border-transparent hover:border-secondary transition-all duration-300"></div>
+</div>
+</div>
+<!-- Project Details -->
+<div>
+<div class="mb-6">
+<p id="modal-location" class="text-white text-lg mb-2 flex items-center">
+<i class="ri-map-pin-line text-secondary mr-2 w-5 h-5 flex items-center justify-center"></i>
+</p>
+<p id="modal-price" class="text-secondary text-2xl font-bold mb-4"></p>
+<p id="modal-description" class="text-gray-300 leading-relaxed mb-6"></p>
+</div>
+<!-- Plot Sizes -->
+<div class="mb-6">
+<h3 class="text-secondary font-semibold text-lg mb-3">Available Plot Sizes</h3>
+<div id="modal-plot-sizes" class="grid grid-cols-2 gap-3">
+<!-- Plot sizes will be populated here -->
+</div>
+</div>
+<!-- Amenities -->
+<div class="mb-6">
+<h3 class="text-secondary font-semibold text-lg mb-3">Premium Amenities</h3>
+<div id="modal-amenities" class="grid grid-cols-2 gap-2 text-sm">
+<!-- Amenities will be populated here -->
+</div>
+</div>
+<!-- Payment Plan -->
+<div class="mb-8">
+<h3 class="text-secondary font-semibold text-lg mb-3">Payment Plan</h3>
+<div id="modal-payment" class="bg-black bg-opacity-50 p-4 !rounded border border-secondary border-opacity-30">
+<!-- Payment details will be populated here -->
+</div>
+</div>
+<!-- CTA Button -->
+<button id="book-visit-btn" class="w-full bg-secondary text-primary py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Book a Site Visit Now</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Site Visit Form -->
+<div id="visit-form" class="slide-form fixed top-0 right-0 h-full w-full max-w-md bg-gradient-to-b from-primary to-black border-l-2 border-secondary z-[9999] p-8 overflow-y-auto">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-secondary font-['Playfair_Display'] text-2xl font-bold">Book Site Visit</h2>
+<button id="close-form" class="w-8 h-8 flex items-center justify-center text-white hover:text-secondary transition-colors duration-300">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<form id="site-visit-form" class="space-y-6">
+<input type="hidden" id="selected-project" name="project">
+<div>
+<label class="block text-white text-sm font-medium mb-2">Full Name *</label>
+<input type="text" id="visitor-name" name="name" required class="w-full px-4 py-3 bg-black border border-secondary border-opacity-50 !rounded text-white focus:border-secondary focus:outline-none transition-all duration-300">
+</div>
+<div>
+<label class="block text-white text-sm font-medium mb-2">Phone Number *</label>
+<input type="tel" id="visitor-phone" name="phone" required class="w-full px-4 py-3 bg-black border border-secondary border-opacity-50 !rounded text-white focus:border-secondary focus:outline-none transition-all duration-300">
+</div>
+<div>
+<label class="block text-white text-sm font-medium mb-2">Email Address *</label>
+<input type="email" id="visitor-email" name="email" required class="w-full px-4 py-3 bg-black border border-secondary border-opacity-50 !rounded text-white focus:border-secondary focus:outline-none transition-all duration-300">
+</div>
+<div>
+<label class="block text-white text-sm font-medium mb-2">Preferred Visit Date *</label>
+<input type="date" id="visit-date" name="date" required class="w-full px-4 py-3 bg-black border border-secondary border-opacity-50 !rounded text-white focus:border-secondary focus:outline-none transition-all duration-300">
+</div>
+<div>
+<label class="block text-white text-sm font-medium mb-2">Message (Optional)</label>
+<textarea id="visitor-message" name="message" rows="3" class="w-full px-4 py-3 bg-black border border-secondary border-opacity-50 !rounded text-white focus:border-secondary focus:outline-none transition-all duration-300 resize-none"></textarea>
+</div>
+<button type="submit" class="w-full bg-secondary text-primary py-4 !rounded-button font-semibold text-lg hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Submit & Contact via WhatsApp</button>
+</form>
+</div>
+<script id="hero-slider-script">
+document.addEventListener('DOMContentLoaded', function() {
+const slides = document.querySelectorAll('.hero-slide');
+const dots = document.querySelectorAll('.slider-dot');
+const prevBtn = document.getElementById('prev-slide');
+const nextBtn = document.getElementById('next-slide');
+let currentSlide = 0;
+let autoSlideInterval;
+function showSlide(index) {
+slides.forEach((slide, i) => {
+slide.style.opacity = i === index ? '1' : '0';
+});
+dots.forEach((dot, i) => {
+if (i === index) {
+dot.classList.remove('bg-white', 'bg-opacity-50');
+dot.classList.add('bg-secondary');
+} else {
+dot.classList.remove('bg-secondary');
+dot.classList.add('bg-white', 'bg-opacity-50');
+}
+});
+}
+function nextSlide() {
+currentSlide = (currentSlide + 1) % slides.length;
+showSlide(currentSlide);
+}
+function prevSlide() {
+currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+showSlide(currentSlide);
+}
+function startAutoSlide() {
+autoSlideInterval = setInterval(nextSlide, 5000);
+}
+function stopAutoSlide() {
+clearInterval(autoSlideInterval);
+}
+nextBtn.addEventListener('click', () => {
+stopAutoSlide();
+nextSlide();
+startAutoSlide();
+});
+prevBtn.addEventListener('click', () => {
+stopAutoSlide();
+prevSlide();
+startAutoSlide();
+});
+dots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+stopAutoSlide();
+currentSlide = index;
+showSlide(currentSlide);
+startAutoSlide();
+});
+});
+startAutoSlide();
+});
+</script>
+<script id="fade-in-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+document.querySelectorAll('.fade-in').forEach(el => {
+observer.observe(el);
+});
+});
+</script>
+<script id="project-modal-script">
+document.addEventListener('DOMContentLoaded', function() {
+const projectData = {
+'emerald-heights': {
+title: 'Emerald Villa',
+location: 'Emerald Villas Sector 12, Greater Noida West',
+price: 'Starting ₹1.5 Cr',
+description: 'Premium residential Villa in a gated community featuring world-class amenities, strategic location advantages, and excellent connectivity to major business hubs. Perfect for luxury living and investment.',
+mainImage: 'villa.jpeg',
+thumbs: [
+'villa.jpeg',
+'villa1.jpg',
+'villa2.jpg'
+],
+plotSizes: ['1200 sq ft', '1500 sq ft', '2000 sq ft', '2500 sq ft'],
+amenities: ['Clubhouse', 'Swimming Pool', '24/7 Security', 'Landscaped Gardens', 'Children\'s Play Area', 'Jogging Track', 'Power Backup', 'Water Supply'],
+payment: 'Down Payment: ₹9 Lakhs (20%)<br>Monthly EMI: ₹1.5 Lakhs for 24 months<br>Registry: After 50% payment completion'
+},
+'golden-meadows': {
+title: 'Mapple Green',
+location: 'Goonti, behror, Rajasthan 301701',
+price: 'Starting ₹25 Lakhs',
+description: 'Exclusive plots with premium infrastructure and excellent connectivity to major hubs. Features modern amenities and strategic location for maximum appreciation potential.',
+mainImage: 'mapple.jpeg',
+thumbs: [
+'mapple.jpeg',
+'Mapple1.jpeg',
+'Mapple2.jpeg'
+],
+plotSizes: ['1000 sq ft', '1350 sq ft', '1800 sq ft', '2200 sq ft'],
+amenities: ['Community Center', 'Sports Complex', 'Meditation Garden', 'Security System', 'Underground Utilities', 'Parking Areas', 'Waste Management', 'Internet Connectivity'],
+payment: 'Down Payment: ₹7.6 Lakhs (20%)<br>Monthly EMI: ₹1.27 Lakhs for 24 months<br>Special Discount: 3% on early booking'
+},
+'royal-gardens': {
+title: 'Atulyam Residency',
+location: 'Shah Nagar Defence Colony Rd, near Tulip Farms, Badripur, Dehradun, Uttarakhand 248005',
+price: 'Starting ₹15 Lakhs',
+description: 'Ultra-premium plots with royal amenities and strategic highway connectivity. Designed for luxury living with world-class infrastructure and premium lifestyle facilities.',
+mainImage: 'atulyam.jpeg',
+thumbs: [
+'atulyam.jpeg',
+'atulyam1.jpeg',
+'atulyam2.jpeg'
+],
+plotSizes: ['1500 sq ft', '2000 sq ft', '2500 sq ft', '3000 sq ft'],
+amenities: ['Royal Clubhouse', 'Infinity Pool', 'Spa & Wellness', 'Concierge Service', 'Valet Parking', 'Private Gardens', 'Helipad Access', 'Golf Course Nearby'],
+payment: 'Down Payment: ₹10.4 Lakhs (20%)<br>Monthly EMI: ₹1.73 Lakhs for 24 months<br>Premium Location Advantage'
+},
+'platinum-enclave': {
+title: 'Azizi Venice',
+location: 'Madinat Al Mataar - Dubai South - Dubai - United Arab Emirates',
+price: 'Launch Soon',
+description: 'Elite residential Property with platinum-grade amenities and expressway advantages. The pinnacle of luxury living with unmatched connectivity and premium infrastructure.',
+mainImage: 'venice.jpeg',
+thumbs: [
+'venice.jpeg',
+'azizi1.jpeg',
+'azizi2.jpeg'
+],
+plotSizes: ['2000 sq ft', '2500 sq ft', '3000 sq ft', '4000 sq ft'],
+amenities: ['Platinum Club', 'Rooftop Pool', 'Business Center', 'Luxury Spa', 'Wine Cellar', 'Private Elevator', 'Smart Home Ready', 'Concierge Desk'],
+payment: 'Down Payment: ₹13.6 Lakhs (20%)<br>Monthly EMI: ₹2.27 Lakhs for 24 months<br>Expressway Premium Location'
+},
+'diamond-valley': {
+title: 'Azizi Rose',
+location: '2 Downtown Street - Jabal Ali Industrial Second - Dubai - United Arab Emirates',
+price: 'Launch Soon',
+description: 'Diamond-grade plots with exceptional investment potential and premium lifestyle amenities. Strategic location with excellent growth prospects and modern infrastructure.',
+mainImage: 'rose.jpeg',
+thumbs: [
+'rose.jpeg',
+'rose1.jpeg',
+'rose2.jpeg'
+],
+plotSizes: ['1100 sq ft', '1400 sq ft', '1900 sq ft', '2400 sq ft'],
+amenities: ['Diamond Club', 'Fitness Center', 'Yoga Pavilion', 'Children\'s Zone', 'Senior Citizen Area', 'Organic Garden', 'Solar Lighting', 'Rainwater Harvesting'],
+payment: 'Down Payment: ₹8.4 Lakhs (20%)<br>Monthly EMI: ₹1.4 Lakhs for 24 months<br>High Appreciation Potential'
+}
+};
+const modal = document.getElementById('project-modal');
+const projectCards = document.querySelectorAll('.project-card');
+const closeModal = document.getElementById('close-modal');
+const bookVisitBtn = document.getElementById('book-visit-btn');
+function openModal(projectKey) {
+const project = projectData[projectKey];
+if (!project) return;
+document.getElementById('modal-title').textContent = project.title;
+document.getElementById('modal-location').innerHTML = `<i class="ri-map-pin-line text-secondary mr-2 w-5 h-5 flex items-center justify-center"></i>${project.location}`;
+document.getElementById('modal-price').textContent = project.price;
+document.getElementById('modal-description').textContent = project.description;
+const modalImage = document.getElementById('modal-image');
+modalImage.style.backgroundImage = `url('${project.mainImage}')`;
+const thumbs = document.querySelectorAll('.modal-thumb');
+thumbs.forEach((thumb, index) => {
+if (project.thumbs[index]) {
+thumb.style.backgroundImage = `url('${project.thumbs[index]}')`;
+thumb.addEventListener('click', () => {
+modalImage.style.backgroundImage = `url('${project.thumbs[index]}')`;
+});
+}
+});
+const plotSizesContainer = document.getElementById('modal-plot-sizes');
+plotSizesContainer.innerHTML = project.plotSizes.map(size =>
+`<div class="bg-black bg-opacity-50 p-3 !rounded border border-secondary border-opacity-30 text-center">
+<span class="text-secondary font-semibold">${size}</span>
+</div>`
+).join('');
+const amenitiesContainer = document.getElementById('modal-amenities');
+amenitiesContainer.innerHTML = project.amenities.map(amenity =>
+`<div class="flex items-center text-white">
+<i class="ri-check-line text-secondary mr-2 w-4 h-4 flex items-center justify-center"></i>
+${amenity}
+</div>`
+).join('');
+document.getElementById('modal-payment').innerHTML = project.payment;
+bookVisitBtn.onclick = () => openVisitForm(project.title);
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeModalFunction() {
+modal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+projectCards.forEach(card => {
+card.addEventListener('click', () => {
+const projectKey = card.dataset.project;
+openModal(projectKey);
+});
+});
+closeModal.addEventListener('click', closeModalFunction);
+modal.addEventListener('click', (e) => {
+if (e.target === modal) {
+closeModalFunction();
+}
+});
+});
+</script>
+<script id="visit-form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const visitForm = document.getElementById('visit-form');
+const closeForm = document.getElementById('close-form');
+const siteVisitForm = document.getElementById('site-visit-form');
+window.openVisitForm = function(projectName) {
+document.getElementById('selected-project').value = projectName;
+visitForm.classList.add('active');
+document.body.style.overflow = 'hidden';
+};
+function closeVisitForm() {
+visitForm.classList.remove('active');
+document.body.style.overflow = 'auto';
+}
+closeForm.addEventListener('click', closeVisitForm);
+siteVisitForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const formData = new FormData(siteVisitForm);
+const projectName = formData.get('project');
+const name = formData.get('name');
+const phone = formData.get('phone');
+const date = formData.get('date');
+const message = formData.get('message');
+const whatsappMessage = `Hello Anchor Realtors, I would like to book a site visit for ${projectName}.
+Name: ${name}
+Phone: ${phone}
+Preferred Date: ${date}${message ? `
+Message: ${message}` : ''}`;
+const whatsappUrl = `https://wa.me/919810882829?text=${encodeURIComponent(whatsappMessage)}`;
+window.open(whatsappUrl, '_blank');
+closeVisitForm();
+siteVisitForm.reset();
+});
+});
+</script>
+<script id="header-functionality-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const header = document.querySelector('header');
+// Mobile menu toggle
+mobileMenuToggle.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+const icon = mobileMenuToggle.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.className = 'ri-menu-line text-xl';
+} else {
+icon.className = 'ri-close-line text-xl';
+}
+});
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerHeight = header.offsetHeight;
+const targetPosition = targetElement.offsetTop - headerHeight - 20;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+// Close mobile menu if open
+if (!mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.add('hidden');
+mobileMenuToggle.querySelector('i').className = 'ri-menu-line text-xl';
+}
+}
+});
+});
+// Header background opacity on scroll
+window.addEventListener('scroll', function() {
+if (window.scrollY > 100) {
+header.classList.add('bg-opacity-100');
+header.classList.remove('bg-opacity-95');
+} else {
+header.classList.add('bg-opacity-95');
+header.classList.remove('bg-opacity-100');
+}
+});
+});
+</script>
+<script>
+    !function (t, e) { var o, n, p, r; e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+    posthog.init('phc_V7JMHB0fVJGRu8UHyrsj6pSL1BS76P5zD8qCi7lrTTV', {
+        api_host: 'https://us.i.posthog.com',
+        autocapture: false,
+        capture_pageview: false,
+        capture_pageleave: false,
+        capture_performance: {
+            web_vitals: false,
+        },
+        rageclick: false,
+    })
+    window.shareKey = '4U3qQ0NBu9SyF09Po1yc_Q';
+    window.host = 'readdy.ai';
+</script>
+</html>
